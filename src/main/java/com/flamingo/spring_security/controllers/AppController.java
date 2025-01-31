@@ -1,7 +1,6 @@
 package com.flamingo.spring_security.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 
 import org.springframework.security.oauth2.client.OAuth2AuthorizedClientService;
 
@@ -20,9 +19,6 @@ public class AppController {
 
 	@Autowired
 	private TokenUtils tokenUtils;
-
-	@Value("${client.id}")
-	private String clientId;
 
 	@GetMapping({ "/", "/home" })
 	public String getLandingPage(Model model) {
