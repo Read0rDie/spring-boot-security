@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: spring-security
+
+  profiles:
+    active: local
+
+  security:
+    oauth2:
+      client:
+        provider:
+          google:
+            redirect-uri: http://localhost:8080/login/oauth2/code/google
+            token-uri: https://oauth2.googleapis.com/token
+            authorization-uri: https://accounts.google.com/o/oauth2/v2/auth?access_type=offline&prompt=consent
+
+logging:
+  level:
+    org.springframework.security: TRACE

@@ -5,6 +5,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-    <p th:text="|Hello, ${name}!|" />
+    <img height="96px" width="96px" th:src="@{{avatar}(avatar=${avatar})}">
+    <p th:text="|Username : ${email}|" />
+    <p th:text="|First Name : ${first_name}|" />
+    <p th:text="|Last Name : ${last_name}|" />
 </body>
 </html>

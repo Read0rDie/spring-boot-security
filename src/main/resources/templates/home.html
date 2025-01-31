@@ -4,8 +4,12 @@
         <title>Spring Security Example</title>
     </head>
     <body>
-        <h1>Welcome!</h1>
-
-        <p>Click <a th:href="@{/hello}">here</a> to see a greeting.</p>
+        <h1>Flamingo</h1>
+        <h2>Demo Landing Page</h2>
+<!--
+        <p><a th:href="@{https://accounts.google.com/o/oauth2/v2/auth?redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Fgrantcode&response_type=code&client_id={client_id}&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&access_type=offline(client_id=${client_id})}">Google Login</a></p>
+    -->
+    <p th:if="${user == null}"><a th:href="@{http://localhost:8080/login}">Google Login</a></p>
+    <p th:if="${user != null}"><a th:href="@{http://localhost:8080/user}">User Profile</a></p>
     </body>
 </html>
