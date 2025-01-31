@@ -9,7 +9,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import com.flamingo.spring_security.helpers.LoginHelper;
 import com.flamingo.spring_security.models.User;
 import com.flamingo.spring_security.utils.TokenUtils;
 
@@ -18,9 +17,6 @@ public class AppController {
 
 	@Autowired
 	OAuth2AuthorizedClientService authorizedClientService;
-
-	@Autowired
-	private LoginHelper loginHelper;
 
 	@Autowired
 	private TokenUtils tokenUtils;
